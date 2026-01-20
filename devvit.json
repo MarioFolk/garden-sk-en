@@ -1,8 +1,4 @@
 {
   "name": "garden-sk-en",
-  "blocks": {
-    "main": {
-      "entry": "src/main.tsx"
-    }
-  }
+  "post": {}
 }
