@@ -1,0 +1,17 @@
+{
+  "name": "garden-sk-en",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd src/client && vite build --watch",
+    "dev:server": "cd src/server && vite build --watch",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd src/client && vite build",
+    "build:server": "cd src/server && vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "typescript": "^5.3.0",
+    "concurrently": "^8.2.0"
+  }
+}
