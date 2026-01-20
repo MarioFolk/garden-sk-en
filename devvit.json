@@ -1,17 +1,8 @@
 {
   "name": "garden-sk-en",
   "blocks": {
-    "internal/gardenClicker": {
+    "main": {
       "entry": "src/main.tsx"
     }
-  },
-  "menu": {
-    "items": [
-      {
-        "label": "Play Garden Clicker",
-        "location": "post",
-        "endpoint": "/internal/gardenClicker"
-      }
-    ]
   }
 }
