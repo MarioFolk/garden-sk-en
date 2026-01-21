@@ -10,7 +10,7 @@ Devvit.addCustomPostType({
   render: (context) => {
     const { userId } = context;
     
-    // Load score with async initializer
+    // Load score from Redis (kvStore)
     const [score, setScore] = useState(async () => {
       if (userId) {
         const stored = await context.kvStore.get(`score:${userId}`);
@@ -19,11 +19,11 @@ Devvit.addCustomPostType({
       return 0;
     });
 
+    // 📝 Click handler - uloží do Redis
     const handleClick = async () => {
       const newScore = score + 1;
       setScore(newScore);
 
-      // Persist to KVStore
       if (userId) {
         await context.kvStore.put(`score:${userId}`, newScore.toString());
       }
