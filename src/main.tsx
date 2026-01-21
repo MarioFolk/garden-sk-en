@@ -1,19 +1,26 @@
-import { Devvit } from '@devvit/public-api';
+import { Devvit, useState } from '@devvit/public-api';
+
+Devvit.configure({
+  redditAPI: true,
+});
 
 Devvit.addCustomPostType({
   name: 'Garden Clicker',
   render: () => {
-    const [score, setScore] = Devvit.useState(0);
+    const [score, setScore] = useState(0);
 
     return (
-      <vstack gap="medium" alignment="center middle">
-        <text size="xlarge">🌱 Garden SK Review Clicker</text>
+      <vstack alignment="center middle" gap="medium">
+        <text size="xlarge">🌱 Garden SK Clicker</text>
 
-        <button appearance="primary" onPress={() => setScore(score + 1)}>
-          Click me!
+        <button
+          appearance="primary"
+          onPress={() => setScore((prev) => prev + 1)}
+        >
+          Klikni 🌿
         </button>
 
-        <text>Score: {score}</text>
+        <text size="large">Score: {score}</text>
       </vstack>
     );
   },

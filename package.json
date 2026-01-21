@@ -7,6 +7,9 @@
     "start": "npx devvit playtest"
   },
   "dependencies": {
-    "@devvit/public-api": "^1.0.0"
+    "@devvit/public-api": "^0.12.9"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.9"
   }
 }
