@@ -2,17 +2,18 @@ import { Devvit } from '@devvit/public-api';
 
 Devvit.addCustomPostType({
   name: 'Garden Clicker',
-  description: 'Simple clicker test',
   render: () => {
-    return (
-      <vstack padding="medium" gap="medium">
-        <text size="xlarge" weight="bold">
-          🌱 Garden Clicker
-        </text>
+    const [score, setScore] = Devvit.useState(0);
 
-        <text>
-          Devvit UI funguje 🎉
-        </text>
+    return (
+      <vstack gap="medium" alignment="center middle">
+        <text size="xlarge">🌱 Garden SK Review Clicker</text>
+
+        <button appearance="primary" onPress={() => setScore(score + 1)}>
+          Click me!
+        </button>
+
+        <text>Score: {score}</text>
       </vstack>
     );
   },

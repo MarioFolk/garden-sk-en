@@ -1,8 +1,12 @@
 {
   "name": "garden-sk-en",
+  "version": "0.0.1",
   "private": true,
-  "type": "module",
+  "scripts": {
+    "build": "echo 'Nothing to build for main.tsx'",
+    "start": "npx devvit playtest"
+  },
   "dependencies": {
-    "@devvit/public-api": "latest"
+    "@devvit/public-api": "^1.0.0"
   }
 }
